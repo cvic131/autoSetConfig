@@ -1,0 +1,23 @@
+# 类型
+huawei:
+  # 设备列表 需要将账号密码配置保存在 config.xlsx 中
+  host:
+    - 192.168.1.1
+    - 192.168.1.2
+  # 设备列表中要执行的命令列表
+  command:
+    - sys
+    - vlan b 100 200
+  # 命令列表中执行命令要等待的时间 可选 默认为10秒
+  timeout: 10
+  # 是否将命令列表执行后保存将回显保存到文件 可选 默认保存
+  saved: True
+
+cisco:
+  host:
+    - 192.168.1.4
+    - 192.168.1.5
+  command:
+    - enable
+    - config terminal
+    - vlan 10,20
