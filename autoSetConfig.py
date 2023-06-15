@@ -31,7 +31,7 @@ def runCommand(connect, command: str, timeout: int):
     :param connect: sshClient创建的链接
     :param command: 需要在ssh链接中执行的命令
     :param timeout: 等待命令执行的时长
-    :returns: 执行命令
+    :returns: 执行完命令后的回显
     """
     connect.send(command + "\n")
     sleep(timeout)
